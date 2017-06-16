@@ -16,6 +16,7 @@ var events_thumbnail_component_1 = require("./events/events-thumbnail.component"
 var navbar_component_1 = require("./nav/navbar.component");
 var event_service_1 = require("./events/shared/event.service");
 var toastr_service_1 = require("./common/toastr.service");
+var event_details_component_1 = require("./events/event-details/event-details.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,6 +29,7 @@ AppModule = __decorate([
             events_app_component_1.EventsAppComponent,
             events_list_component_1.EventsListComponent,
             events_thumbnail_component_1.EventThumbnailComponent,
+            event_details_component_1.EventDetailsComponent,
             navbar_component_1.NavBarComponent
         ],
         providers: [event_service_1.EventService, toastr_service_1.ToastrService],
