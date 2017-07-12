@@ -11,18 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+//Barrel where all the other imports come from
+var index_1 = require("./events/index");
 var events_app_component_1 = require("./events-app.component");
-var events_list_component_1 = require("./events/events-list.component");
-var events_thumbnail_component_1 = require("./events/events-thumbnail.component");
 var navbar_component_1 = require("./nav/navbar.component");
-var event_service_1 = require("./events/shared/event.service");
 var toastr_service_1 = require("./common/toastr.service");
-var event_details_component_1 = require("./events/event-details/event-details.component");
 var routes_1 = require("./routes");
-var create_event_component_1 = require("./events/create-event.component");
 var _404_component_1 = require("./errors/404.component");
-var event_route_activator_service_1 = require("./events/event-details/event-route-activator.service");
-var events_list_resolver_service_1 = require("./events/events-list-resolver.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -34,18 +29,18 @@ AppModule = __decorate([
             router_1.RouterModule.forRoot(routes_1.appRoutes)],
         declarations: [
             events_app_component_1.EventsAppComponent,
-            events_list_component_1.EventsListComponent,
-            events_thumbnail_component_1.EventThumbnailComponent,
-            event_details_component_1.EventDetailsComponent,
+            index_1.EventsListComponent,
+            index_1.EventThumbnailComponent,
+            index_1.EventDetailsComponent,
             navbar_component_1.NavBarComponent,
-            create_event_component_1.CreateEventComponent,
+            index_1.CreateEventComponent,
             _404_component_1.Error404Component,
         ],
         providers: [
-            event_service_1.EventService,
+            index_1.EventService,
             toastr_service_1.ToastrService,
-            events_list_resolver_service_1.EventListResolver,
-            event_route_activator_service_1.EventRouteActivator,
+            index_1.EventListResolver,
+            index_1.EventRouteActivator,
             { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState }
         ],
         bootstrap: [events_app_component_1.EventsAppComponent]
